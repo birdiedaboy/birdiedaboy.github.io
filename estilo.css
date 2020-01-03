@@ -1,92 +1,121 @@
 body{
-	margin: 0;
-
+	padding: 0% 2% 0% 0%;
+    margin: 0;
+    display: flex;
+}
+p{
+  font-family: 'Roboto Mono', monospace;  
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+    max-width: 30%;
+    align-items: center;
+    background-color: #34558b;
+    max-height: 50vh;
+    padding-top: 2%;
+    position: sticky;
+    top: 0px;
 }
 h1{
 	margin: 0;
-	font-size: 8.5vw;
-	position: absolute;
-    right: 5px;
-
-
-
-}
-.bloque{
-	width: 100%;
-	height: 35vw;
-
-}
-.azul{
-	background-color: blue;
-}
-.fondo{
-	background-color: #ffff99;
-}
-.fondo2{
-	background-color: #ffffe6;
-}
-.fondo3{
-	background-color: #ffff4d;
-}
-
-.foto{
-	height: 5px;
-	width:auto;
-}
-img{
-	width:auto;
-	height: 30vw;
-}
-.info{
-	position: absolute;
-	left: 35vw;
-	top: 9vw;
-	text-align: left;
-	font-family: Arial;
-	font-size: 3vw;
-}
-p{ 
-	
+	font-size: 6.8em;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    letter-spacing: -4px;
 }
 h2{
-	margin: 0px;
-	font-size: 7vw;
-
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5em;
 }
-
-.derecha{
-	position: absolute;
-	left: 1vw;
+.profile{
+    width: 70%;
+    height: auto;
 }
-.izquierda{
-	position: absolute;
-	right: 1vw;
-
+main{
+    display: flex;
+    max-width: 70%;
+    min-width: 70%;
+   
 }
-.centro{
-	position: absolute;
-	right: 40vw;
+article{
+    min-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
-.Sfont{
-	font-size: 3.5vw;
-	text-align: left;
+section{
+    min-width: 100%;
+    display: flex;
+   flex-direction: column;
+    
 }
-.centro2{
-	position: absolute;
-	right: 25vw;
+main article section:nth-child(odd){
+    align-items: flex-end;
 }
-.estudio{
-	text-align: right;
-
+.card{
+    background-color: antiquewhite;
+    width:10%;
+    padding: 2%;
+    margin: 1%;
+   
 }
-input{
-	float: left;
-	clear: both;
-	padding-bottom: 2vw;
-	margin-top: 1vw;
+.basis{
+    flex-basis: 100%;
 }
-
-textarea {
-	float: left;
-	clear: both;
+.card1{
+    background-color: antiquewhite;
+    width:40%;
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+}
+.card2{
+    background-color: antiquewhite;
+    width:50%;
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -345px;
+}
+.card3{
+    background-color: antiquewhite;
+    width:100%;
+    padding: 2%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -345px;
+    left: 3%;
+}
+.cardimg{
+    width: 100%;
+}
+.card:nth-child(odd){
+    
+}
+.vertical{
+    vertical-align: text-top;
+}
+.holder{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    
+}
+.grow{
+    flex-grow: 2;
+}
+.grow3{
+    flex-grow: 4;
 }
