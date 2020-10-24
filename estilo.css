@@ -80,6 +80,16 @@ article{
     justify-content: center;
     margin: 0;
 }
+.webdev a:hover{
+/*    transform: skewY(25deg);*/
+    transform: skewX(-5deg);
+    transition: 1s;
+}
+.webdev a img:hover{
+/*    transform: skewY(-25deg);*/
+    transform: skewX(15deg);
+    transition: 1s;
+}
 .webdevText{
     margin-left: 1rem;
 }
