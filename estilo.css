@@ -41,6 +41,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 90%;
+    height: 100%;
     margin-top: 10%
 }
 h1{
@@ -95,13 +96,15 @@ article{
 
 .tarjeta{
     background-color: antiquewhite;
+    border: 5px solid #333333;
     width:100%;
-    max-width: 300px;
+    max-width: 305px;
     padding: 1rem;
     margin: 1rem;
     flex-direction: column;
-    border-radius: 1rem;
+/*    border-radius: 1rem;*/
     color: #333333;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .2);
 }
 .portadaProyecto{
     width: 100%;
@@ -112,4 +115,42 @@ article{
     color: #DCBD6B;
     background-color: #4A4873;
 }
+.clientes{
+    width: 100%;
+/*    background-color: brown;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.imgClientes{
+    object-fit: contain;
+    width: 50%;
+    align-self: center;
+    padding: 1rem
+}
+.PLF{
+    width: 50%;
+/*    background-color: brown;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
 
+.pIcon{
+    object-fit: contain;
+    align-self: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pIcon img{
+    width: 4rem;
+}
+.abajo{
+    margin-top: auto;
+}
