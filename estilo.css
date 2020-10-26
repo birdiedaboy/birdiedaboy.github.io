@@ -1,5 +1,5 @@
-*{
-    box-sizing: border-box;
+*,*::before, *::after{
+	box-sizing: border-box;
 }
 ul{
     list-style-type: none;
@@ -17,6 +17,11 @@ a{
     text-decoration: none;
     color: inherit;
 }
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+/****/
 
 body{
     margin: 0;
@@ -25,8 +30,318 @@ body{
     font-family: 'Roboto Mono', monospace;
     color: #DCBD6B;
 }
+/*
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    padding: 1rem 1rem 1rem 1rem;
+    position: fixed;
+    height: 100%;
+    width: 20rem;
+    color: #DCBD6B
+}
+*/
+/*
+.menuItems{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin-top: 10%
+}
+*/
+h1{
+	font-size: 5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    letter-spacing: -0.3rem;
+    width: 100%;
+    text-align: center;
+    
+}
+h2{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3em;
+}
+main article h2{
+    margin: 1rem
+}
+/*
+.profile{
+    width: 70%;
+    height: auto;
+}
+*/
+main{
+    background-color: #4A4873;
+    height: 100%;
+    max-width: 100%;
+    padding: rem;
+    margin-top: 3rem;
+   
+}
+article{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+.webdev{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-nav{
+}
+.webdev a:hover{
+/*    transform: skewY(25deg);*/
+    transform: skewX(-5deg);
+    transition: 1s;
+}
+.webdev a img:hover{
+/*    transform: skewY(-25deg);*/
+    transform: skewX(10deg);
+    transition: 1s;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
+}
+.webdevText{
+    margin-left: 1rem;
+}
+.aboutMe{
+    margin-left: 0;
+    padding: 2rem;
+    color: #4A4873;
+    background-color: #DCBD6B;
+}
+.aboutText{
+    margin-left: 1rem;
+    width: 90%;
+}
+
+.tarjeta{
+    background-color: antiquewhite;
+    border: 5px solid #333333;
+    width:100%;
+    max-width: 200px;
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+/*    border-radius: 1rem;*/
+    color: #333333;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .2);
+    transition: all 1s;
+}
+.portadaProyecto{
+    width: 100%;
+}
+.socialProfiles{
+    margin-left: 0;
+    padding: 2rem;
+    color: #DCBD6B;
+    background-color: #4A4873;
+}
+.clientes{
+    width: 100%;
+/*    background-color: brown;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.imgClientes{
+    object-fit: contain;
+    width: 100%;
+    align-self: center;
+    padding: 1rem
+}
+.PLF{
+    width: 50%;
+/*    background-color: brown;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.pIcon{
+    object-fit: contain;
+    align-self: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pIcon img{
+    width: 4rem;
+}
+.abajo{
+    margin-top: auto;
+}
+
+
+/* Estilo del Nav */
+.headerNav{
+	background: #333333;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 666;
+    height: 3rem
+}
+.logo{
+	margin: 1.5em 0;
+    width: 5% ;
+    display: none;
+	
+}
+.nav-toggle{
+	display: none;
+}
+.nav-toggle-label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	display: block;
+	background: white;
+	height: 3px;
+	width: 2em;
+	position: relative;
+	
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+	content:'';
+	position: absolute;
+}
+.nav-toggle-label span::before{
+	bottom: 7px;
+}
+.nav-toggle-label span::after{
+	top: 7px;
+}
+.navMenu{
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: #333333;
+	width: 100%;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+	
+}
+.navMenu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navMenu li {
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+
+.navMenu a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.2 rem;
+	opacity: 0;
+	transition: opacity 150ms ease-in-out;
+}
+.navMenu a:hover{
+	color: #DCBD6B;
+}
+.nav-toggle:checked ~ nav {
+	transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a {
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
+}
+.nav-toggle:checked nav-toggle-label span{
+	opacity: 0;
+}
+.nav-toggle:checked span::before{
+	transform: rotate(45deg);
+}
+.nav-toggle:checked span::after{
+	transform: rotate(-45deg);
+}
+
+ @media screen and (min-width: 800px) {
+	.nav-toggle-label{
+		display: none;
+	}
+	.headerNav{
+		display: flex;
+        flex-direction: column;
+        width: 20rem;
+        height: 100%;
+        padding: 2rem;
+	}
+	.logo{
+        width: 100%;
+        display: block;
+	}
+	.navMenu{
+		all: unset;
+		display: flex;
+        flex-direction: column;
+        
+	}
+	.navMenu ul{ 
+        width: 100%;
+        margin: 0;
+	}
+	.navMenu li{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0;
+	}
+	.navMenu a{
+		opacity: 1;
+		position: relative;
+	}
+	.navMenu a::before {
+		content:'';
+		display: block;
+		height: 4px;
+		background: #DCBD6B;
+		width: 100%;
+		position: absolute;
+		top: -.75em;
+		left: 0;
+		right: 0;
+		transform: scale(0, 1);
+		transform-origin: right;
+		transition: transform ease-in-out 250ms;
+
+	}
+	.navMenu a:hover::before{
+		transform: scale(1,1);
+	}
+     body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    color: #DCBD6B;
+}
+
+.menu{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,6 +381,7 @@ main{
     height: 100%;
     max-width: 100%;
     padding: 2rem;
+    margin-top: 0;
    
 }
 article{
@@ -74,11 +390,13 @@ article{
     flex-direction: column;
     
 }
+     main article h2{
+    margin: 0;
+}
 .webdev{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0;
 }
 .webdev a:hover{
 /*    transform: skewY(25deg);*/
@@ -87,8 +405,9 @@ article{
 }
 .webdev a img:hover{
 /*    transform: skewY(-25deg);*/
-    transform: skewX(15deg);
+    transform: skewX(10deg);
     transition: 1s;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 .webdevText{
     margin-left: 1rem;
@@ -115,6 +434,7 @@ article{
 /*    border-radius: 1rem;*/
     color: #333333;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .2);
+    transition: all 1s;
 }
 .portadaProyecto{
     width: 100%;
@@ -164,3 +484,5 @@ article{
 .abajo{
     margin-top: auto;
 }
+	
+} 
