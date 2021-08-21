@@ -460,22 +460,16 @@ article{
     padding: 1rem
 }
 .PLF{
-    width: 50%;
-/*    background-color: brown;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
 }
 
 .pIcon{
-    object-fit: contain;
-    align-self: center;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 .pIcon img{
