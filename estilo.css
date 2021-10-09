@@ -43,6 +43,7 @@ li {
 html{
     --clrP: #4A4873;
     --clrG: #DCBD6B;
+    --clrAW:#faebd7;
     --clrDark: #333333;
     --clrLight: #ffffff;
     scroll-behavior: smooth;
@@ -177,7 +178,7 @@ article {
 }
 
 .tarjeta {
-    background-color: antiquewhite;
+    background-color: var(--clrAW);
     border: 5px solid #333333;
     width: 100%;
     max-width: 200px;
@@ -524,7 +525,7 @@ article {
     }
 
     .tarjeta {
-        background-color: antiquewhite;
+        background-color: var(--clrAW);
         border: 5px solid #333333;
         width: 100%;
         max-width: 305px;
