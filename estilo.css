@@ -520,8 +520,9 @@ article {
     }
 
     .aboutText {
-        margin-left: 1rem;
-        width: 90%;
+        margin-left: 7vw;
+        margin-top: 1rem;
+        max-width: 65rem;
     }
 
     .tarjeta {
